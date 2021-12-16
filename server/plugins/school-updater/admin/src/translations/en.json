@@ -1,0 +1,16 @@
+{
+  "plugin.name": "School Updater",
+  "containers.HomePage.PluginHeader.title": "School Updater",
+  "containers.HomePage.PluginHeader.description": "Update the address ,state and phone number of your schools model",
+  "containers.HomePage.form.googlePlacesApiKey": "Insert Your Google Map ApiToken",
+  "containers.HomePage.form.googlePlacesApiKey.description": "This key will be used to  fetch the address of your schools ",
+  "containers.HomePage.form.address": "Update Address ",
+  "containers.HomePage.form.address.description": "Update School Address",
+  "containers.HomePage.form.ngState": "Update State",
+  "containers.HomePage.form.ngState.description": "Update School  State",
+  "containers.HomePage.form.phoneNumber": "Update Phone Numbers ",
+  "containers.HomePage.form.phoneNumber.description": "Update Phone Numbers ",
+  "containers.HomePage.form.updateAll": "Update All",
+  "containers.HomePage.form.updateAll.description": "Update All Or The Fields That Are Empty",
+  "containers.HomePage.form.submit": "Update  Schools Data"
+}

@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "school-address-updater.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/updateSchools",
+      "handler": "school-address-updater.updateSchools",
+      "config": {
+        "policies": ["isAuthenticated", "isAdmin"]
+      }
+    }
+  ]
+}
