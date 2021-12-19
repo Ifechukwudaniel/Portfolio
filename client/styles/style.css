@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Notable&display=swap');
+
+body {
+  background-color: #FEFFFC;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav {
+  background-color: #F5F6F0 ;
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  height: 10vh;
+}
+
+
+.navTitle{
+    /* color: rgba(255, 190, 10, 0.87) !important; */
+    -webkit-text-stroke: 2px black;
+    font-family: Arial Black;
+    font-style: normal;
+}
+
+.Poppins-Bold {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 28px;
+line-height: 42px;
+}
+
+.menu {
+  position: absolute;
+  z-index: 9;
+  height: 90vh !important;
+  width: 100vw;
+  opacity: 0;
+}
+
+.menu-half {
+  height: 90vh !important;
+  width: 100%;
+  padding: 5% 10% 2% 10%;
+}
+
+a.menu-link {
+  font-family: Days One;
+  font-size: 40px !important;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 65px;
+  line-height: 83px;
+}
+
+
+.home-background {
+  background: url('../assets/backdesign.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 90vh !important;
+  z-index: 1;
+}
+
+.home-card {
+  margin-top: 15vh;
+  position:fixed;
+  border-radius: 0% 30% 0% 0%;
+  padding: 2% 2% 2% 2%;
+}
+
+.home-card-text {
+  font-family: "Itim";
+  font-size: 40px !important;
+  margin-bottom: 10%;
+}
+
+.home-card-text-bottom {
+  margin-top: 10%;
+}
+
+.blog-title {
+  font-family: "DaysOne";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 43px !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+.blog-image {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: 0 !important;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 60% !important;
+  max-height: 50% !important;
+  object-fit: cover;
+}
+

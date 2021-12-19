@@ -5,12 +5,12 @@ import NextImage from "./image"
 const Card = ({ article }) => {
   return (
     <Link href={`/article/${article.slug}`}>
-      <a className="uk-link-reset">
-        <div className="uk-card uk-card-muted">
-          <div className="uk-card-media-top">
+      <a style={{ background: "black" }} className="block ">
+        <div className="w-100 h-90">
+          <div className="h-3/4">
             <NextImage image={article.image} />
           </div>
-          <div className="uk-card-body">
+          <div className="h-1/4">
             <p id="category" className="uk-text-uppercase">
               {article.category.name}
             </p>

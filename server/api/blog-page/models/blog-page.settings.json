@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_pages",
+  "info": {
+    "name": "Blogpage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    }
+  }
+}
