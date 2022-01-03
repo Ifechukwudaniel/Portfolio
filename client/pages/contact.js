@@ -4,9 +4,11 @@ import { fetchAPI } from "../lib/api"
 
 const Contact = ({ homepage }) => {
   return (
-    <Layout categories={[]}>
+    <Layout darkHeader={true}>
       <Seo seo={homepage.seo} />
-      <h1> Contact </h1>
+      <div className="darkPage bg-dark-light ">
+        <h1 className="navTitle text-4xl text-link-yellow"> Contact</h1>
+      </div>
     </Layout>
   )
 }

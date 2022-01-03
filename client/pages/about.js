@@ -3,11 +3,15 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 
-const About = ({ categories, homepage }) => {
+const About = ({ homepage }) => {
   return (
-    <Layout categories={[]}>
+    <Layout darkHeader={true}>
       <Seo seo={homepage.seo} />
-      <h1> About </h1>
+      <div className="darkPage bg-dark-light ">
+        <div className=" flex flex-row  ml-20">
+          <h1 className="navTitle text-4xl text-link-yellow mt-10"> About </h1>
+        </div>
+      </div>
     </Layout>
   )
 }

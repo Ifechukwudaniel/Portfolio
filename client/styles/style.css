@@ -8,9 +8,15 @@ a{
   text-decoration: none;
 }
 
+.darkPage {
+  background-color: #F5F6F0 ;
+  height: 90vh;
+  width: 100vw;
+}
+
 .nav {
   background-color: #F5F6F0 ;
-  border: 3px solid #000000;
+  border: 3px solid #ffffff;
   box-sizing: border-box;
   text-decoration: none !important;
   height: 10vh;
@@ -26,15 +32,20 @@ a{
 
 .Poppins-Bold {
   font-family: "Poppins";
-  font-style: normal;
+  font-style: bold;
   font-weight: bold;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-size: 28px;
-line-height: 42px;
+}
+
+.Poppins-Medium {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .menu {
@@ -88,29 +99,3 @@ a.menu-link {
 .home-card-text-bottom {
   margin-top: 10%;
 }
-
-.blog-title {
-  font-family: "DaysOne";
-  font-style: normal;
-  font-weight: 500;
-  line-height: 43px !important;
-  text-transform: uppercase !important;
-  color: #000000 !important;
-}
-
-.blog-image {
-  position: absolute;
-  inset: 0px;
-  box-sizing: border-box;
-  padding: 0px;
-  border: none;
-  margin: 0 !important;
-  display: block;
-  width: 0px;
-  height: 0px;
-  min-width: 100%;
-  max-width: 60% !important;
-  max-height: 50% !important;
-  object-fit: cover;
-}
-

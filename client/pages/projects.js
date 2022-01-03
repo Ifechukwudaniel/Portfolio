@@ -6,7 +6,9 @@ const Projects = ({ homepage }) => {
   return (
     <Layout categories={[]}>
       <Seo seo={homepage.seo} />
-      <h1> Projects </h1>
+      <div className="flex flex-row mt-10 ml-20">
+        <h1 className="navTitle text-4xl text-link-yellow"> PROJECTS </h1>
+      </div>
     </Layout>
   )
 }

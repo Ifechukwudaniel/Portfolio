@@ -1,8 +1,8 @@
 import Header from "./Header"
 
-const Layout = ({ children, categories, seo }) => (
+const Layout = ({ children, darkHeader }) => (
   <>
-    <Header categories={categories} />
+    <Header darkHeader={darkHeader} />
     {children}
   </>
 )

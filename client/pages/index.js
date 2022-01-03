@@ -1,5 +1,4 @@
 // import React from "react"
-import Articles from "../components/articles"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
@@ -7,7 +6,7 @@ import ReactTyped from "react-typed"
 
 const index = ({ homepage }) => {
   return (
-    <Layout categories={[]}>
+    <Layout darkHeader={false}>
       <Seo seo={homepage.seo} />
       <div className=" h-screen home-background">
         <div className="h-3/4 w-2/5 bg-dark bg-opacity-90 text-offWhite home-card ">
