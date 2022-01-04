@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react"
 import { Sling as Hamburger } from "hamburger-react"
-import HeaderLink from "./HeaderLink"
 import { motion } from "framer-motion"
+import HeaderContent from "./HeaderContent"
 
 const Header = ({ darkHeader }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,18 +37,18 @@ const Header = ({ darkHeader }) => {
           variants={headerVariants}
           className={`nav py-2 sticky top-0 z-40`}
         >
-          <div className=" flex flex-row mx-10">
-            <div className="basis-1/2">
+          <div className="flex flex-row mx-10">
+            <div className="basis-3/4">
               <motion.a
                 animate={isOpen ? "open" : "closed"}
                 variants={darkHeader ? titleVariantsDark : titleVariants}
                 href="#"
-                className={`navTitle text-5xl `}
+                className={`navTitle  text-5xl`}
               >
-                Ifechukwu Daniel
+                ID
               </motion.a>
             </div>
-            <div className="basis-1/2 flex justify-end">
+            <div className="basis-1/4 flex justify-end">
               <button className=" px-3 py-1" id="navbar-toggle">
                 <Hamburger
                   onToggle={handleHamburger}
@@ -59,21 +59,7 @@ const Header = ({ darkHeader }) => {
             </div>
           </div>
         </motion.nav>
-        <motion.div
-          animate={isOpen ? "open" : "closed"}
-          variants={variants}
-          className="menu flex flex-row bg-dark"
-        >
-          <div className="basic-1/2 menu-half"></div>
-          <div className="basic-1/2 bg-dark-light menu-half flex flex-col">
-            <HeaderLink href={"/"} text={"Home"} />
-            <HeaderLink href={"/projects"} text={"Projects"} />
-            <HeaderLink href={"/cv"} text={"CV"} />
-            <HeaderLink href={"/about"} text={"About"} />
-            <HeaderLink href={"/contact"} text={"Contact"} />
-            <HeaderLink href={"/blog"} text={"Blog"} />
-          </div>
-        </motion.div>
+        <HeaderContent open={isOpen} />
       </Fragment>
     )
   else
@@ -85,12 +71,12 @@ const Header = ({ darkHeader }) => {
           className={`nav py-2 sticky top-0 z-40`}
         >
           <div className=" flex flex-row mx-10">
-            <div className="basis-1/2">
+            <div className="basis-3/4">
               <motion.a href="#" className={`navTitle text-5xl  text-white`}>
-                Ifechukwu Daniel
+                ID
               </motion.a>
             </div>
-            <div className="basis-1/2 flex justify-end">
+            <div className="basis-1/4 flex justify-end">
               <button className=" px-3 py-1" id="navbar-toggle">
                 <Hamburger
                   onToggle={handleHamburger}
@@ -101,21 +87,7 @@ const Header = ({ darkHeader }) => {
             </div>
           </div>
         </motion.nav>
-        <motion.div
-          animate={isOpen ? "open" : "closed"}
-          variants={variants}
-          className="menu flex flex-row bg-dark"
-        >
-          <div className="basic-1/2 menu-half"></div>
-          <div className="basic-1/2 bg-dark-light menu-half flex flex-col">
-            <HeaderLink href={"/"} text={"Home"} />
-            <HeaderLink href={"/projects"} text={"Projects"} />
-            <HeaderLink href={"/cv"} text={"CV"} />
-            <HeaderLink href={"/about"} text={"About"} />
-            <HeaderLink href={"/contact"} text={"Contact"} />
-            <HeaderLink href={"/blog"} text={"Blog"} />
-          </div>
-        </motion.div>
+        <HeaderContent open={isOpen} />
       </Fragment>
     )
 }
