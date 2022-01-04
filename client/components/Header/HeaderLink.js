@@ -9,7 +9,7 @@ export default function HeaderLink({ href, text }) {
       <Link href={href}>
         <a
           href={href}
-          className={`menu-link ${
+          className={`text-5xl menu-link ${
             router.pathname === href ? "text-link-yellow" : "text-link-gray"
           }`}
         >
