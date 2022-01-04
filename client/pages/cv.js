@@ -4,15 +4,20 @@ import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 import { Document, Page } from "react-pdf"
 import { getStrapiMedia } from "../lib/media"
+import useIsMobile from "../lib/isMobile"
 
 const CV = ({ homepage, cv }) => {
   let cvFile = getStrapiMedia(cv.cv_file)
+  let mobile = useIsMobile()
   return (
-    <Layout categories={[]}>
+    <Layout>
       <Seo seo={homepage.seo} />
-      <div className="flex flex-row justify-center">
-        <div className="w-full">
-          <iframe className="flex-col w-96 h-96" src="/pdf/cv.pdf" />
+      <div className="flex flex-row py-5 px-5 darkPage">
+        <div className=" xl:w-3/5 lg:w-4/5 md:w-4/5 sm:w-fit m-auto ">
+          <iframe
+            src="/pdf/cv.pdf"
+            style={{ width: "100%", height: mobile ? "400px" : "650px" }}
+          ></iframe>
         </div>
       </div>
     </Layout>
