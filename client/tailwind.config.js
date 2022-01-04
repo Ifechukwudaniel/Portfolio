@@ -5,14 +5,14 @@ module.exports = {
   ],
   theme: {
     screens: {
-      sm: "480px",
+      sm: "370px",
       md: "768px",
       lg: "976px",
       xl: "1440px",
     },
     colors: {
       white: "#fff",
-      offWhite: "#FDFAFA",
+      offWhite: "#F5F6F0",
       blue: "#1fb6ff",
       purple: "#7e5bef",
       pink: "#ff49db",
