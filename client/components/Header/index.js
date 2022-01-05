@@ -35,7 +35,7 @@ const Header = ({ darkHeader }) => {
         <motion.nav
           animate={isOpen ? "open" : "closed"}
           variants={headerVariants}
-          className={`nav py-2 sticky top-0 z-40`}
+          className={`nav py-2 sticky top-0 z-40  w-screen`}
         >
           <div className="flex flex-row mx-10">
             <div className="basis-3/4">
