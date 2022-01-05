@@ -1,5 +1,5 @@
 {
-  "name": "cbt-guide-web",
+  "name": "server",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -12,6 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "mime-types": "^2.1.27",
+    "pg": "^8.7.1",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-mongoose": "3.6.8",
