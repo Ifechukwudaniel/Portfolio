@@ -5,10 +5,11 @@ import Layout from "../../components/layout"
 import NextImage from "../../components/image"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
+import BlogPageImage from "../../components/Blogs/BlogPageImage"
+import BlogPageAuthor from "../../components/Blogs/BlogPageAuthor"
+import MarkDown from "../../components/Blogs/MarkDown"
 
-const Article = ({ article, categories }) => {
-  const imageUrl = getStrapiMedia(article.image)
-
+const Article = ({ article }) => {
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
@@ -17,32 +18,30 @@ const Article = ({ article, categories }) => {
   }
 
   return (
-    <Layout categories={categories}>
+    <Layout>
       <Seo seo={seo} />
       <div
-        id="banner"
-        className=" uk-container-medium uk-height-small uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-        data-src={imageUrl}
-        data-srcset={imageUrl}
-        data-uk-img
-      />
-      <div className="uk-section">
-        <div className="uk-container uk-container-medium">
-          <h1>{article.title}</h1>
-          <ReactMarkdown source={article.content} escapeHtml={false} />
-          <hr className="uk-divider-small" />
-          <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
-              <NextImage image={article.author.picture} />
+        style={{ background: " #F7ECC9" }}
+        className="flex flex-row px-10 md:px-4 sm:px-1  overflow-auto "
+      >
+        <div className="flex flex-row xl:w-8/12 lg:w-9/12 md:w-full sm:w-full  m-auto">
+          <div className="mt-10 bg-white border  xl:px-10 lg:px-5 py-10 md:px-4 sm:px-4 ">
+            <div className="w-fit">
+              <h1 className=" text-3xl  font-bold pl-0  pb-2 ">
+                {article.title}
+              </h1>
+              <h2 className="font-light text-md pl-0  pb-3 text-black opacity-70">
+                {article.description}
+              </h2>
             </div>
-            <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By {article.author.name}
-              </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">{article.published_at}</Moment>
-              </p>
+            <BlogPageAuthor article={article} />
+            <div className=" m-auto">
+              <BlogPageImage image={article.image} />
             </div>
+            <div className="flex  mt-10 overflow-clip">
+              <MarkDown content={article.content} escapeHtml={true} />
+            </div>
+            <BlogPageAuthor article={article} />
           </div>
         </div>
       </div>
