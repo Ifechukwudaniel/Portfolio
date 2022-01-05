@@ -11,12 +11,10 @@ const BlogImage = ({ image, className }) => {
   return (
     <NextImage
       loader={loader}
-      layout="intrinsic"
-      width={"640"}
-      height={"310"}
+      width={"280"}
+      height={"200"}
       src={url}
       alt={alternativeText || ""}
-      className={className}
     />
   )
 }
