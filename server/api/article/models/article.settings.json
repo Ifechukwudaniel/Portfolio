@@ -48,6 +48,9 @@
     "author": {
       "via": "articles",
       "model": "writer"
+    },
+    "readTime": {
+      "type": "biginteger"
     }
   }
 }

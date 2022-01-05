@@ -3,7 +3,7 @@ import ProjectItem from "../components/Project/ProjectItem"
 import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 
-const Projects = ({ homepage }) => {
+const Projects = ({ homepage, projects }) => {
   return (
     <Layout categories={[]}>
       <Seo seo={homepage.seo} />
@@ -14,7 +14,13 @@ const Projects = ({ homepage }) => {
           </h1>
         </div>
         <div>
-          <ProjectItem />
+          {projects.map((project) => (
+            <ProjectItem
+              title={project.title}
+              description={project.description}
+              image={project.image}
+            />
+          ))}
         </div>
       </div>
     </Layout>
@@ -23,10 +29,13 @@ const Projects = ({ homepage }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage] = await Promise.all([fetchAPI("/homepage")])
+  const [homepage, projects] = await Promise.all([
+    fetchAPI("/homepage"),
+    fetchAPI("/projects"),
+  ])
 
   return {
-    props: { homepage },
+    props: { homepage, projects },
     revalidate: 1,
   }
 }

@@ -568,6 +568,9 @@
                 "author": {
                   "type": "string"
                 },
+                "readTime": {
+                  "type": "integer"
+                },
                 "published_at": {
                   "type": "string"
                 },

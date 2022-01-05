@@ -23,6 +23,14 @@ a{
 }
 
 
+.roboto {
+  font-family: Roboto;
+}
+
+.daysOne {
+  font-family: Days One;
+}
+
 .itim {
   font-family: "Itim";
 }
@@ -36,8 +44,21 @@ a{
     font-style: normal;
 }
 
-.Poppins-Bold {
+.blog-author-name {
+  font-family: Roboto ;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 11px;
+  
+}
+
+.poppins {
   font-family: "Poppins";
+}
+
+.Poppins-Bold {
   font-style: bold;
   font-weight: bold;
   display: flex;
@@ -105,9 +126,17 @@ a.menu-link {
   margin-top: 10%;
 }
 
+.truncate-2 {
+  -webkit-line-clamp:2
+}
 
 @media only screen and (max-width: 800px ){
 	.hidden-menu {
-    display: none;
+    display: none  !important;
   }
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
 }
