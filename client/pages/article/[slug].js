@@ -21,8 +21,8 @@ const Article = ({ article }) => {
         style={{ background: " #F7ECC9" }}
         className="flex flex-row px-10 md:px-4 sm:px-0  overflow-auto "
       >
-        <div className="flex flex-row xl:w-8/12 lg:w-9/12   m-auto">
-          <div className="mt-10 bg-white border  xl:px-10 lg:px-5 py-10 md:px-4 sm:px-4 ">
+        <div className="flex flex-row xl:w-8/12 lg:w-9/12 sm:w-full   m-auto ">
+          <div className="mt-10 bg-white border  xl:px-10 lg:px-5 py-10 md:px-4 sm:px-4 sm: w-full ">
             <div className="w-fit">
               <h1 className=" text-3xl  font-bold pl-0  pb-2 ">
                 {article.title}
@@ -35,10 +35,7 @@ const Article = ({ article }) => {
             <div className="">
               <BlogPageImage image={article.image} />
             </div>
-            <div
-              style={{ width: "90vw" }}
-              className="flex  mt-10 overflow-clip  w-screen"
-            >
+            <div className="flex  mt-10 overflow-clip ">
               <MarkDown content={article.content} escapeHtml={true} />
             </div>
             <BlogPageAuthor article={article} />
