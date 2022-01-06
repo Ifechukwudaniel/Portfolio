@@ -5,7 +5,6 @@ import AuthorImage from "./AuthorImage"
 import moment from "moment"
 
 const BlogCard = ({ article, hideCategory }) => {
-  console.log(article)
   return (
     <Link href={`/article/${article.slug}`}>
       <div className="flex flex-row bg-white drop-shadow-sm hover:drop-shadow-lg mb-6 border">

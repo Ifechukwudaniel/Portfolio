@@ -6,8 +6,7 @@ import { Document, Page } from "react-pdf"
 import { getStrapiMedia } from "../lib/media"
 import useIsMobile from "../lib/isMobile"
 
-const CV = ({ homepage, cv }) => {
-  let cvFile = getStrapiMedia(cv.cv_file)
+const CV = ({ homepage }) => {
   let mobile = useIsMobile()
   return (
     <Layout>

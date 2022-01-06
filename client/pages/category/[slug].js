@@ -12,7 +12,6 @@ const Category = ({ category, categories, articles }) => {
   }
 
   let categoryShuffle = sampleSize(categories, 10)
-  console.log(categoryShuffle)
 
   return (
     <Layout>
