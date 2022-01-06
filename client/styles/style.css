@@ -99,7 +99,7 @@ a.menu-link {
 
 
 .home-background {
-  background: url('../assets/png/backdesign.png') no-repeat center center fixed;
+  background: url('/images/png/backdesign.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
