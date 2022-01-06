@@ -13,6 +13,7 @@
   "dependencies": {
     "mime-types": "^2.1.27",
     "pg": "^8.7.1",
+    "sharp": "^0.28.1",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
     "strapi-connector-mongoose": "3.6.8",
@@ -25,6 +26,7 @@
     "strapi-plugin-i18n": "3.6.8",
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-upload-aws-s3": "^3.6.8",
     "strapi-utils": "3.6.8"
   },
   "author": {
