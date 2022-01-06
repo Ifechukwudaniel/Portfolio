@@ -16,6 +16,7 @@ const Projects = ({ homepage, projects }) => {
         <div>
           {projects.map((project) => (
             <ProjectItem
+              key={project.id}
               title={project.title}
               description={project.description}
               image={project.image}
