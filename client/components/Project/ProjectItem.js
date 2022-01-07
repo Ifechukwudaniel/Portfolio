@@ -23,8 +23,6 @@ export default function ProjectItem({
     setIsViewerOpen(false)
   }
 
-  console.log(url)
-
   const loader = () => {
     return `${getStrapiMedia(image)}?w=${width}`
   }
