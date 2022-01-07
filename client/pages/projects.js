@@ -20,6 +20,9 @@ const Projects = ({ homepage, projects }) => {
               title={project.title}
               description={project.description}
               image={project.image}
+              isOpenSource={project.isOpenSource}
+              githubLink={project.githubLink}
+              link={project.link}
             />
           ))}
         </div>

@@ -1,14 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import { getStrapiMedia } from "../../lib/media"
+import ImageViewer from "react-simple-image-viewer"
 
 export default function ProjectItem({
   title,
   description,
   isOpenSource,
   image,
+  link,
+  githubLink,
 }) {
+  const [isViewerOpen, setIsViewerOpen] = useState(false)
+
   const { url, alternativeText, width } = image
+
+  const openImageViewer = () => {
+    setIsViewerOpen(true)
+  }
+
+  const closeImageViewer = () => {
+    setIsViewerOpen(false)
+  }
+
+  console.log(url)
 
   const loader = () => {
     return `${getStrapiMedia(image)}?w=${width}`
@@ -24,17 +39,47 @@ export default function ProjectItem({
           {description}
         </p>
         <div className="flex flex-row mt-10 ">
-          <div className="py-2 px-4 bg-white drop-shadow-md  hover:drop-shadow-2xl text-dark border border-dark itim">
-            See Live
-          </div>
-          <div className="py-2 px-4 bg-white drop-shadow-md hover:drop-shadow-2xl text-dark border border-dark itim">
-            Source Code
-          </div>
+          (
+          {link && (
+            <a
+              target="_blank"
+              href={`${link}`}
+              className="py-2 px-4 bg-white drop-shadow-md  hover:drop-shadow-2xl text-dark border border-dark itim"
+            >
+              See Live
+            </a>
+          )}
+          {githubLink && (
+            <a
+              target="_blank"
+              href={`${githubLink}`}
+              className="py-2 px-4 bg-white drop-shadow-md hover:drop-shadow-2xl text-dark border border-dark itim"
+            >
+              Source Code
+            </a>
+          )}
         </div>
       </div>
       <div className="xl:basis-6/12 lg:basic-6/12  md:basis-1/3">
         <div className=" ml-10 ">
-          <Image loader={loader} src={url} width="580" height="300" />
+          <Image
+            onClick={() => openImageViewer()}
+            loader={loader}
+            src={url}
+            width="580"
+            height="300"
+          />
+          {isViewerOpen && (
+            <ImageViewer
+              src={[url]}
+              backgroundStyle={{
+                zIndex: "40",
+              }}
+              disableScroll={false}
+              closeOnClickOutside={true}
+              onClose={closeImageViewer}
+            />
+          )}
         </div>
       </div>
     </div>
