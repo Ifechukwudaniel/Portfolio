@@ -1,15 +1,47 @@
 {
-  "name": "client",
+  "name": "strapi-starter-frontend",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
-    "develop:backend": "yarn --cwd server develop",
-    "develop:frontend": "wait-on http://localhost:1337/admin && yarn --cwd client dev",
-    "dev": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*"
+    "develop": "next dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "next build && next export",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
   },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "font-awesome": "^4.7.0",
+    "framer-motion": "^5.5.3",
+    "hamburger-react": "^2.4.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.24.0",
+    "next": "^12.0.0",
+    "next-images": "^1.8.4",
+    "react": "17.0.0",
+    "react-dom": "17.0.0",
+    "react-lottie": "^1.2.3",
+    "react-markdown": "^4.2.2",
+    "react-moment": "^0.9.6",
+    "react-pdf": "^5.6.0",
+    "react-simple-image-viewer": "^1.1.1",
+    "react-syntax-highlighter": "^15.4.5",
+    "react-typed": "^1.2.0",
+    "remark-gfm": "^3.0.1",
+    "sharp": "^0.29.3"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "cross-env": "7.0.3",
-    "npm-run-all": "4.1.5",
-    "wait-on": "5.2.1"
+    "autoprefixer": "^10.4.0",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.3.1",
+    "tailwindcss": "^3.0.5"
   }
 }
