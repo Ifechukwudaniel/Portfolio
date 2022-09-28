@@ -4,10 +4,10 @@ import Seo from "../components/seo"
 import { fetchAPI } from "../lib/api"
 import ReactTyped from "react-typed"
 
-const index = ({ homepage }) => {
+const index = () => {
   return (
     <Layout darkHeader={false}>
-      <Seo seo={homepage.seo} />
+      <Seo />
       <div className=" h-screen home-background">
         <div className="h-3/4 xl:w-2/5 lg:w-2/4 md:w-3/5 sm:w-full  bg-dark bg-opacity-90 text-offWhite home-card ">
           <h2 className="text-offWhite  text-5xl  home-card-text">
@@ -38,20 +38,6 @@ const index = ({ homepage }) => {
       </div>
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  // Run API calls in parallel
-  const [articles, categories, homepage] = await Promise.all([
-    fetchAPI("/articles"),
-    fetchAPI("/categories"),
-    fetchAPI("/homepage"),
-  ])
-
-  return {
-    props: { articles, categories, homepage },
-    revalidate: 1,
-  }
 }
 
 export default index

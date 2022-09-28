@@ -44,29 +44,4 @@ const Category = ({ category, categories, articles }) => {
     </Layout>
   )
 }
-
-export async function getStaticPaths() {
-  const categories = await fetchAPI("/categories")
-
-  return {
-    paths: categories.map((category) => ({
-      params: {
-        slug: category.slug,
-      },
-    })),
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  const category = await fetchAPI(`/categories/${params.slug}`)
-  const categories = await fetchAPI("/categories")
-  const articles = category.articles
-
-  return {
-    props: { category, categories, articles },
-    revalidate: 1,
-  }
-}
-
 export default Category

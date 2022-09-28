@@ -7,13 +7,11 @@ export default function ProjectItem({
   title,
   description,
   isOpenSource,
-  image,
+  url,
   link,
   githubLink,
 }) {
   const [isViewerOpen, setIsViewerOpen] = useState(false)
-
-  const { url, alternativeText, width } = image
 
   const openImageViewer = () => {
     setIsViewerOpen(true)
@@ -62,8 +60,7 @@ export default function ProjectItem({
         <div className=" ml-10 ">
           <Image
             onClick={() => openImageViewer()}
-            loader={loader}
-            src={url}
+            src={`${url}`}
             width="580"
             height="300"
           />

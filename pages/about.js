@@ -29,7 +29,7 @@ const About = ({ homepage }) => {
   ]
   return (
     <Layout darkHeader={false}>
-      <Seo seo={homepage.seo} />
+      <Seo />
       <div className=" flex xl:flex-row lg:flex-row md:flex-col sm:flex-col ">
         <div className="flex flex-col justify-center bg-dark-light p-4 xl:w-3/5 lg:w-3/5 ">
           <div className=" w-1/4 rounded-xl m-auto ">
@@ -88,16 +88,6 @@ const About = ({ homepage }) => {
       </div>
     </Layout>
   )
-}
-
-export async function getStaticProps() {
-  // Run API calls in parallel
-  const [homepage] = await Promise.all([fetchAPI("/homepage")])
-
-  return {
-    props: { homepage },
-    revalidate: 1,
-  }
 }
 
 export default About

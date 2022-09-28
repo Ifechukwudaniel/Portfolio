@@ -3,18 +3,23 @@ import { useContext } from "react"
 import { GlobalContext } from "../pages/_app"
 import { getStrapiMedia } from "../lib/media"
 
-const Seo = ({ seo }) => {
-  const { defaultSeo, siteName } = useContext(GlobalContext)
+const Seo = () => {
+  const defaultSeo = {
+    metaTitle: "Ifechukwu Daniel",
+    metaDescription:
+      "My name is Ifechukwu  Daniel and I am an experienced software engineer and freelance developer.Throughout my career, I have acquired advanced technical knowledge and the ability to explain programming topics clearly and in detail to a broad audience. I invite you to take my course, where I have put a lot of effort to explain web and software engineering concepts in a detailed, hands-on and understandable way.",
+  }
+  const siteName = "Ifechukwu Daniel"
+
   const seoWithDefaults = {
     ...defaultSeo,
-    ...seo,
   }
   const fullSeo = {
     ...seoWithDefaults,
     // Add title suffix
     metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
     // Get full image URL
-    shareImage: getStrapiMedia(seoWithDefaults.shareImage),
+    shareImage: "",
   }
 
   return (

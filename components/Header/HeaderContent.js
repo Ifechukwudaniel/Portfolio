@@ -63,7 +63,6 @@ const HeaderContent = ({ open }) => {
           <HeaderLink href={"/projects"} text={"Projects"} />
           <HeaderLink href={"/cv"} text={"CV"} />
           <HeaderLink href={"/about"} text={"About"} />
-          <HeaderLink href={"/blog"} text={"Blog"} />
         </div>
       </motion.div>
     </Fragment>

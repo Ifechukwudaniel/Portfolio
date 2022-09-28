@@ -46,26 +46,5 @@ const Article = ({ article }) => {
   )
 }
 
-export async function getStaticPaths() {
-  const articles = await fetchAPI("/articles")
-
-  return {
-    paths: articles.map((article) => ({
-      params: {
-        slug: article.slug,
-      },
-    })),
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params }) {
-  const articles = await fetchAPI(`/articles?slug=${params.slug}`)
-  const categories = await fetchAPI("/categories")
-  return {
-    props: { article: articles[0], categories },
-    revalidate: 1,
-  }
-}
 
 export default Article
