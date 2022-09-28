@@ -39,11 +39,11 @@ const projects = [
   {
     id: "61e861550023d504703dfe5",
     title: "BIU MOBILE APP",
-    description: "The fooicail app of benson iadohasa university",
+    description: "The ooicail app of benson iadohasa university",
     isOpenSource: false,
     githubLink: "",
-    link: "https://magniswap.io/",
-    url: "/images/png/projects/3.png",
+    link: "https://play.google.com/store/apps/details?id=edu.biu.mobileapp&hl=en_US&gl=US",
+    url: "/images/png/projects/4.png",
   },
 ]
 
