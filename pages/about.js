@@ -7,19 +7,19 @@ import Image from "next/image"
 const About = ({ homepage }) => {
   const skillList = [
     "React",
-    "React Native",
+    "Java",
     "MongoDb",
     "MySql",
-    "Hapi",
+    "Solidity",
     "NoSql",
-    "Firebase",
+    "HardHat",
     "Node Js",
     "Express  Js",
     "Next JS",
-    "Koa",
+    "Rust",
     "Typescript",
     "Javascript",
-    "Laravel",
+    "Brownie",
   ]
 
   const strengthList = [
