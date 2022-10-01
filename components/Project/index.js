@@ -36,6 +36,15 @@ const projects = [
     link: "https://magniswap.io/",
     url: "/images/png/projects/3.png",
   },
+   {
+    id: "61e861550023d504703dfe65",
+    title: "kitsoonay Website",
+    description: "This is the official  website of kitsoonay",
+    isOpenSource: false,
+    githubLink: "",
+    link: "https://kitsoonay.io/",
+    url: "/images/png/projects/5.png",
+  },
   {
     id: "61e861550023d504703dfe5",
     title: "BIU MOBILE APP",
